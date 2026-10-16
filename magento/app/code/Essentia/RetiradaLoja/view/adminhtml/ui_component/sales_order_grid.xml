@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <columns name="sales_order_columns">
+        <column name="essentia_shipping_method"
+                class="Essentia\RetiradaLoja\Ui\Component\Listing\Column\ShippingMethod"
+                sortOrder="85">
+            <settings>
+                <filter>select</filter>
+                <options class="Essentia\RetiradaLoja\Model\Source\ShippingMethods"/>
+                <dataType>text</dataType>
+                <label translate="true">Método de Entrega</label>
+                <visible>true</visible>
+                <sortable>true</sortable>
+            </settings>
+        </column>
+    </columns>
+</listing>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <essentia_retiradaloja>
+                <active>0</active>
+                <model>Essentia\RetiradaLoja\Model\Carrier\RetiradaLoja</model>
+                <title>Retirado na Loja</title>
+                <name>Retirada Gratuita</name>
+                <sallowspecific>0</sallowspecific>
+                <sort_order>90</sort_order>
+            </essentia_retiradaloja>
+        </carriers>
+    </default>
+</config>

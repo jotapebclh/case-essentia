@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <plugin name="essentia_retiradaloja_order_grid_shipping_method"
+                type="Essentia\RetiradaLoja\Plugin\OrderGridShippingMethod"
+                sortOrder="10"/>
+    </type>
+    <type name="Magento\Sales\Model\ResourceModel\Order\Grid\Collection">
+        <!-- Qualify the date before the native plugin handles this field. -->
+        <plugin name="orderGridCollectionFilterPlugin" sortOrder="20"/>
+        <plugin name="essentia_retiradaloja_order_grid_date_filter"
+                type="Essentia\RetiradaLoja\Plugin\OrderGridDateFilter"
+                sortOrder="10"/>
+    </type>
+</config>
