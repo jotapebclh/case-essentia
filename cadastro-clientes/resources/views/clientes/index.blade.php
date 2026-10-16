@@ -16,7 +16,6 @@
         <div class="titulo-pagina">
             <div>
                 <h1>Clientes</h1>
-                <p class="subtitulo">Gerencie os clientes</p>
             </div>
             <button id="cadastrar-cliente" class="botao botao-primario" type="button">
                 <span class="icone-mais" aria-hidden="true">+</span> Cadastrar cliente
@@ -32,7 +31,6 @@
             <div class="barra-listagem">
                 <div>
                     <h2>Todos os clientes</h2>
-                    <p>Informações de contato sempre à mão.</p>
                 </div>
                 <form id="formulario-busca" class="busca" action="{{ route('clientes.list') }}" method="get" role="search">
                     <label class="somente-leitor" for="busca">Buscar por nome, e-mail ou telefone</label>
