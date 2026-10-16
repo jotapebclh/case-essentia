@@ -14,11 +14,11 @@ A interface foi construída com Blade, HTML, CSS e JavaScript puro, utilizando F
 
 ## 1. Pré-requisitos
 
-Para executar o projeto localmente no Windows, é necessário instalar:
+Antes de iniciar a configuração do projeto, instale os seguintes pré-requisitos no Windows:
 
-- **XAMPP:** fornece PHP e MySQL/MariaDB.
-- **Composer:** gerenciador de dependências PHP.
-- **Node.js e npm:** utilizados para instalar e compilar os arquivos CSS e JavaScript.
+- **XAMPP:** fornece PHP e MySQL/MariaDB. [Download oficial](https://www.apachefriends.org/pt_br/index.html).
+- **Composer:** gerenciador de dependências PHP. [Instalação oficial](https://getcomposer.org/).
+- **Node.js e npm:** utilizados para instalar e compilar os arquivos CSS e JavaScript. O npm é incluído na instalação do Node.js. [Download oficial](https://nodejs.org/pt-br).
 - **Git:** para clonar o repositório.
 
 Versões utilizadas no desenvolvimento:
@@ -39,7 +39,9 @@ Caso o PHP não esteja configurado no PATH do Windows, utilize `C:\xampp\php\php
 
 ## 2. Clonar o projeto
 
-Abra o PowerShell e execute:
+Abra o terminal e execute a opção correspondente:
+
+**PowerShell:**
 
 ```powershell
 cd C:\xampp\htdocs
@@ -47,25 +49,45 @@ git clone https://github.com/jotapebclh/case-essentia.git
 cd case-essentia\cadastro-clientes
 ```
 
+**Bash (Git Bash no Windows):**
+
+```bash
+cd /c/xampp/htdocs
+git clone https://github.com/jotapebclh/case-essentia.git
+cd case-essentia/cadastro-clientes
+```
+
 O projeto Laravel está dentro da pasta `cadastro-clientes`.
+
+Os demais comandos deste guia funcionam tanto no PowerShell quanto no Bash, exceto quando houver opções específicas para cada terminal.
 
 ## 3. Instalar as dependências
 
-Execute os comandos abaixo na pasta do Laravel:
+Execute os comandos abaixo na pasta do Laravel (\cadastro-clientes):
 
 ```powershell
 composer install
-npm ci OU npm.cmd ci
+npm ci
 ```
 
 O Composer instalará as dependências PHP, enquanto o npm instalará as dependências utilizadas pelo frontend.
+
+No Windows, caso `npm` não funcione, tente `npm.cmd` no lugar de `npm` nos comandos deste guia.
 
 ## 4. Configurar o ambiente
 
 Crie o arquivo `.env` a partir do modelo disponibilizado pelo Laravel:
 
+**PowerShell:**
+
 ```powershell
 Copy-Item .env.example .env
+```
+
+**Bash:**
+
+```bash
+cp .env.example .env
 ```
 
 Gere a chave da aplicação:
@@ -141,7 +163,7 @@ O comando cria o link simbólico necessário para disponibilizar as fotos armaze
 Execute:
 
 ```powershell
-npm run build OU npm.cmd run build
+npm run build
 ```
 
 Esse comando compila os arquivos CSS e JavaScript utilizados pela aplicação.
@@ -223,7 +245,7 @@ php artisan storage:link
 Execute novamente:
 
 ```powershell
-npm run build OU npm.cmd run build
+npm run build
 ```
 
 **Comando `php` não reconhecido**
