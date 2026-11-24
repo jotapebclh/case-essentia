@@ -1,4 +1,4 @@
-![Tela de gerenciamento de clientes](tela-clientes.png)
+![Tela de gerenciamento de clientes](docs/tela-clientes.png)
 
 # Cadastro de Clientes
 
