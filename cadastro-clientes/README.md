@@ -1,3 +1,5 @@
+![Tela de gerenciamento de clientes](docs/tela-clientes.png)
+
 # Cadastro de Clientes
 
 Sistema de cadastro e gerenciamento de clientes desenvolvido em **PHP 8.2, Laravel 12 e MySQL**, utilizando arquitetura MVC.
@@ -207,6 +209,12 @@ O sistema utiliza a arquitetura MVC do Laravel:
 - **Migrations:** definem a estrutura das tabelas do banco de dados.
 
 As fotos são armazenadas no disco público do Laravel. O banco de dados guarda apenas o caminho do arquivo.
+
+### Modelo relacional
+
+O [modelo relacional](Modelo-Relacional-Cadastro-Clientes.png) apresenta a tabela `clientes`, que concentra os dados necessários para esta atividade. A opção por uma única tabela para o cadastro foi intencional: como cada cliente possui um nome, um e-mail, um telefone e uma foto no escopo atual, não foi necessário criar tabelas e relacionamentos adicionais, evitando complexidade desnecessária.
+
+O Laravel também possui migrations para tabelas de suporte, como usuários, sessões, cache e filas. Elas não representam entidades adicionais do cadastro de clientes e, por isso, não foram incluídas no modelo.
 
 ## 12. Regras principais
 
